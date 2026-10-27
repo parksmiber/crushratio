@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parksmiber-crushratio"
+version = "0.1.0"
+description = "统计提示词各段的字符数占比，标出重复表达与可压缩部分，给出压缩比估算"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "parksmiber" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://parksmiber.github.io"
+Repository = "https://github.com/parksmiber/crushratio"
+Issues = "https://github.com/parksmiber/crushratio/issues"
+
+[project.scripts]
+crushratio = "crushratio:main"
+
+[tool.setuptools]
+py-modules = ["crushratio"]
